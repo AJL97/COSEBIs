@@ -140,7 +140,6 @@ class Create_Cosebis(object):
 				Tps.append(T_p)
 				Tms.append(T_m)
 				
-				integrands = []
 				for sample in range(1,samples+1):
 					
 					sample_xi_p = all_xi_p[bin,sample-1,:]
@@ -154,8 +153,6 @@ class Create_Cosebis(object):
 					else:
 						factor = (T_p*sample_xi_p) + (T_m*sample_xi_m)
 					
-					integrand = thetas*factor
-					integrands.append(integrand)
 					dthetas = thetas[1:]-thetas[:-1]
 					
 					if self._dtheta == None:
