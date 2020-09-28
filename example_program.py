@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import sys
 
 '''Function to create the COSEBIs given specific xipms files'''
-def create_Cosebis(xip,xim,thetas,dir='',tdir='',dtheta=None,ranges='0.5_300'):
+def create_Cosebis(xip,xim,thetas,dtheta=None,ranges='0.5_300'):
 	
-	CC = cc.Create_Cosebis(noise=False,dir=dir,tdir=tdir)
+	CC = cc.Create_Cosebis()
 	
 	#Setting the xipm's and thetas	
 	CC._data_xip = xip
@@ -20,7 +20,7 @@ def create_Cosebis(xip,xim,thetas,dir='',tdir='',dtheta=None,ranges='0.5_300'):
 		CC._dtheta = dtheta
 	
 	#Storing the E-modes in En	
-	En = CC.cosebis(n=7,min=False,get_data=False,ranges=ranges)
+	En = CC.cosebis(n=7,min=False,ranges=ranges)
 	
 	return En		
 	
