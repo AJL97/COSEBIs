@@ -1,5 +1,9 @@
 '''
 This script contains the additive Gaussianity test as described in Sellentin et al. 2017 (DOI: 10.1093/mnras/stx2491)
+
+
+TO DO: 
+- LESS INIT OBJECTS IN UsefulFuncs
 '''
 import numpy as np
 import matplotlib.pyplot as plt
