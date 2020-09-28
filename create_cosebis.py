@@ -124,12 +124,6 @@ class Create_Cosebis(object):
 		#N-values	
 		for i in range(nmax):
 			Nn[i] = np.float128(str(Nn[i]))
-				
-		colors = ['grey','red','green','blue','orange','pink','brown']*10
-		
-		plot_bins = [0,10,19,27,34,40,45,49,52,54]
-		act_bins = [11,22,33,44,55,66,77,88,99,1010]
-		W = 0
 		
 		for bin in range(bins):
 		
