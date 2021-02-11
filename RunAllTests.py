@@ -321,7 +321,7 @@ class UsefulFuncs(object):
 			preds.append(add_pred)
 			hits = Addgram[b]
 			diff = add_pred - hits
-			mis += abs(diff)
+			mis += (diff**2)
 			
 		return mis/(self._histobins*1.0)
 	
